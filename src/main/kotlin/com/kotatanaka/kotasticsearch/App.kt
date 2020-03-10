@@ -4,6 +4,8 @@ import org.jooby.Jooby.*
 import org.jooby.Kooby
 
 class App : Kooby({
+  port(6060)
+
   get { "Hello, World!" }
 })
 
