@@ -1,0 +1,19 @@
+version: "3"
+services:
+  kotasticsearch_es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.0
+    container_name: kotasticsearch_es
+    hostname: kotasticsearch_es
+    environment:
+      - node.name=elasticsearch
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - ./es_data/:/usr/share/elasticsearch/data/
+      - ./esconfig/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
