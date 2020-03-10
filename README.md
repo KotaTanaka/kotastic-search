@@ -11,6 +11,19 @@
 
 ## Getting Started
 
+* Install
+
+```
+$ git clone git@github.com:KotaTanaka/kotastic-search.git
+$ cd kotastic-search
+```
+
+* Start Elasticsearch
+
+```
+$ ./start-es.sh
+```
+
 * Run
 
 ```
@@ -18,6 +31,12 @@ $ ./gradlew joobyRun
 ```
 
 → http://localhost:8080
+
+* Stop Elasticsearch
+
+```
+$ ./stop-es.sh
+```
 
 * Test
 
