@@ -26,3 +26,6 @@ build
 .gradle
 *.iml
 !gradle-wrapper.jar
+
+# Data
+es_data
